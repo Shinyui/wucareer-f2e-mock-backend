@@ -86,3 +86,5 @@ const fakeTodoData = [
   { id: 29, todo: "Make own LEGO creation", completed: false },
   { id: 30, todo: "Take cat on a walk", completed: false },
 ];
+
+module.exports = fakeTodoData;
