@@ -1,7 +1,7 @@
 const fakeProductData = require("../models/fake-data/fakeProductData");
 const { ReasonPhrases, StatusCodes } = require("http-status-codes");
 
-const httpGetFakeProductData = (req, res) => {
+const httpGetFakeProducstData = (req, res) => {
   const { start } = req.query;
   let hasNext = false;
 
@@ -16,6 +16,16 @@ const httpGetFakeProductData = (req, res) => {
   });
 };
 
+const httpGetFakeProductData = (req, res) => {
+  const id = req.params.id;
+
+  return res.status(StatusCodes.OK).send({
+    message: ReasonPhrases.OK,
+    data: fakeProductData[Number(id) - 1] || {},
+  });
+};
+
 module.exports = {
+  httpGetFakeProducstData,
   httpGetFakeProductData,
 };
