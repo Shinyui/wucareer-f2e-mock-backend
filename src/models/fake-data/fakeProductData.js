@@ -43,7 +43,7 @@ const fakeProductData = [
     description:
       "MacBook Pro 2021 with mini-LED display may launch between September, November",
     price: 1749,
-    image: "http://localhost:8000/product_6.jpg",
+    image: "http://localhost:8000/product_6.png",
   },
   {
     id: 7,
