@@ -2,8 +2,15 @@ const fakeProductData = require("../models/fake-data/fakeProductData");
 const { ReasonPhrases, StatusCodes } = require("http-status-codes");
 
 const httpGetFakeProducstData = (req, res) => {
-  const { start } = req.query;
+  let { start } = req.query;
   let hasNext = false;
+
+  if (start === undefined) {
+    return res.status(StatusCodes.OK).send({
+      message: ReasonPhrases.OK,
+      data: fakeProductData,
+    });
+  }
 
   if (fakeProductData.slice(Number(start) + 4).length > 0) {
     hasNext = true;
