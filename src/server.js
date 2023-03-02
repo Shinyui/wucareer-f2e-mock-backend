@@ -1,7 +1,9 @@
 const http = require("http");
 const app = require("./app");
 
+// chagne the port number if needed
 const PORT = 8000;
+
 const server = http.createServer(app);
 
 const startServer = async () => {
