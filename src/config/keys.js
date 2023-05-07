@@ -1,6 +1,7 @@
 const keys = {
   jwtSecret: "YOUR_JWT_SECRET",
-  jwtExpire: "1h",
+  jwtAccessExpire: "1h",
+  jwtRefreshExpire: "1d",
 };
 
 module.exports = keys;
